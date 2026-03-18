@@ -161,6 +161,8 @@ export const checkAuth = async (req, res) => {
     res.status(200).json({
       success: true,
       user,
+     token, // ✅ REQUIRED
+
     });
   } catch (error) {
     console.error("Error in checkAuth:", error);
@@ -178,6 +180,8 @@ export const logout = async (req, res) => {
     return res.status(200).json({
       message: "Logged out successfully",
       success: true,
+            token, // ✅ REQUIRED
+
     });
   } catch (error) {
     console.error("Error in logout:", error);
