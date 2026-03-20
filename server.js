@@ -17,7 +17,7 @@ const app = express();
 
 await connectCloudinary();
 // allow multiple origins
-const allowedOrigins = ["https://freshmart-adminpage1.vercel.app/seller","https://freshmart-clientpage12.vercel.app" ];
+const allowedOrigins = ["https://freshmart-adminpage1.vercel.app","https://freshmart-clientpage12.vercel.app" ];
 //middlewares
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(cookieParser());
